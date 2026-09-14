@@ -1,0 +1,17 @@
+{
+  "id": "help_mira_breakfast",
+  "title": "Help Mira prepare breakfast",
+  "description": "Talk to Mira, collect the bread in the kitchen, then bring it back to her.",
+  "status": "not_started",
+  "objectives": [
+    { "id": "talk", "type": "talk", "target": "mira", "quantity": 1, "text": "Talk to Mira" },
+    { "id": "collect", "type": "collect", "target": "bread", "quantity": 1, "text": "Collect one bread from the kitchen" },
+    { "id": "return", "type": "return", "target": "mira", "quantity": 1, "text": "Return to Mira" }
+  ],
+  "required_items": { "bread": 1 },
+  "rewards": [
+    { "type": "relationship", "character_id": "mira", "points": 10, "friendship": 5, "affection": 1 },
+    { "type": "flag", "key": "breakfast_completed", "value": true },
+    { "type": "advance_time", "steps": 1 }
+  ]
+}

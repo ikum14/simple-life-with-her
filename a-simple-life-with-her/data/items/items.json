@@ -1,0 +1,4 @@
+{
+  "bread": { "name": "Bread", "description": "A fresh loaf for breakfast.", "stack_limit": 99 },
+  "apple": { "name": "Apple", "description": "A crisp apple from the kitchen.", "stack_limit": 99 }
+}

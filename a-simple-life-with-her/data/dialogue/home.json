@@ -1,0 +1,19 @@
+{
+  "bed": { "start": "ask", "nodes": {
+    "ask": { "speaker": "Ren", "text": "Turn in for the day?", "choices": [
+      { "text": "Rest until tomorrow morning", "next": "rest" },
+      { "text": "Not yet", "next": "stay" }
+    ] },
+    "rest": { "speaker": "Ren", "text": "A new day. Let's take it one step at a time.", "effects": [{ "type": "rest" }] },
+    "stay": { "speaker": "Ren", "text": "There's still a little more to do." }
+  } },
+  "table": { "start": "look", "nodes": {
+    "look": { "speaker": "Ren", "text": "Two chairs, two cups. A small place that feels like home." }
+  } },
+  "kitchen": { "start": "look", "nodes": {
+    "look": { "speaker": "Ren", "text": "Everything we need for a simple breakfast. The bread and apple are on the counter." }
+  } },
+  "door": { "start": "look", "nodes": {
+    "look": { "speaker": "Ren", "text": "The village can wait. Only our home is open in this foundation build." }
+  } }
+}

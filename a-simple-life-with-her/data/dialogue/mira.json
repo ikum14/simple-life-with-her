@@ -1,0 +1,24 @@
+{
+  "mira_start": {
+    "start": "hello",
+    "nodes": {
+      "hello": { "speaker": "Ren", "text": "Good morning, Mira.", "next": "request" },
+      "request": { "speaker": "Mira", "text": "Morning. Would you bring me the bread from the kitchen? We could have breakfast together.", "choices": [
+        { "text": "Of course.", "next": "accepted" },
+        { "text": "In a little while.", "next": "later" }
+      ] },
+      "accepted": { "speaker": "Ren", "text": "I'll get it. It's on the kitchen counter, right?", "effects": [{ "type": "start_quest", "quest_id": "help_mira_breakfast" }] },
+      "later": { "speaker": "Mira", "text": "All right. I'll be here." }
+    }
+  },
+  "mira_reminder": { "start": "reminder", "nodes": {
+    "reminder": { "speaker": "Mira", "text": "The bread is on the kitchen counter, in the upper-right room." }
+  } },
+  "mira_return": { "start": "offer", "nodes": {
+    "offer": { "speaker": "Ren", "text": "Here's the bread. Shall we eat?", "next": "thanks" },
+    "thanks": { "speaker": "Mira", "text": "Thank you, Ren. It's nice having breakfast together.", "effects": [{ "type": "complete_quest", "quest_id": "help_mira_breakfast" }] }
+  } },
+  "mira_after": { "start": "quiet", "nodes": {
+    "quiet": { "speaker": "Mira", "text": "That was a good breakfast. Maybe we can do this again sometime." }
+  } }
+}

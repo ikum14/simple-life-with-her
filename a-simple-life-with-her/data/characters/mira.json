@@ -1,0 +1,14 @@
+{
+  "id": "mira",
+  "name": "Mira",
+  "relationship": { "relationship_points": 0, "relationship_level": 0, "affection": 0, "friendship": 0, "event_flags": {} },
+  "level_thresholds": [0, 10, 30, 60, 100],
+  "dialogue_rules": [
+    { "condition": { "quest_status": "completed", "quest_id": "help_mira_breakfast" }, "dialogue_id": "mira_after" },
+    { "condition": { "quest_ready": "help_mira_breakfast" }, "dialogue_id": "mira_return" },
+    { "condition": { "quest_status": "active", "quest_id": "help_mira_breakfast" }, "dialogue_id": "mira_reminder" },
+    { "condition": {}, "dialogue_id": "mira_start" }
+  ],
+  "schedule": [],
+  "events": []
+}
